@@ -1,13 +1,13 @@
-import type { ButtonProps } from "@mantine/core";
+import type { ActionIconProps } from "@mantine/core";
 // eslint-disable-next-line no-restricted-imports
-import { Button as MantineButton } from "@mantine/core";
+import { ActionIcon as MantineActionIcon } from "@mantine/core";
 import { cloneElement, forwardRef } from "react";
 
-export const Button = forwardRef<
+export const ActionIcon = forwardRef<
   HTMLButtonElement | HTMLAnchorElement,
-  ButtonProps<"button" | "a"> & { dent?: boolean }
+  ActionIconProps<"button" | "a"> & { dent?: boolean }
 >(({ dent, sx, ...props }, ref) => {
-  return cloneElement(<MantineButton />, {
+  return cloneElement(<MantineActionIcon />, {
     sx: {
       ...sx,
       "&:not(:disabled):active": dent ? undefined : { transform: "none" },
@@ -17,4 +17,4 @@ export const Button = forwardRef<
   });
 });
 
-Button.displayName = "Button";
+ActionIcon.displayName = "ActionIcon";

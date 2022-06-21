@@ -1,7 +1,10 @@
 {
   "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "css.validate": false,
-  "editor.codeActionsOnSave": ["source.fixAll.eslint"],
+  "editor.codeActionsOnSave": [
+    "source.fixAll.eslint",
+    "source.addMissingImports"
+  ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.quickSuggestions": { "strings": true },
