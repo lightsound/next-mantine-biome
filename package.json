@@ -11,17 +11,17 @@
     "@mantine/hooks": "4.2.10",
     "@mantine/next": "4.2.10",
     "@mantine/notifications": "^4.2.10",
-    "next": "^12.1.7-canary.41",
+    "next": "^12.1.7-canary.48",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-error-boundary": "3.1.4",
-    "tabler-icons-react": "^1.49.0"
+    "tabler-icons-react": "^1.51.0"
   },
   "devDependencies": {
     "@types/node": "18.0.0",
     "@types/react": "18.0.14",
-    "@typescript-eslint/eslint-plugin": "^5.28.0",
-    "@typescript-eslint/parser": "^5.28.0",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
     "eslint": "8.18.0",
     "eslint-config-next": "12.1.6",
     "eslint-config-prettier": "8.5.0",
