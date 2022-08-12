@@ -26,16 +26,7 @@ module.exports = {
     // React のデフォルトインポートや特定のライブラリからのインポート禁止
     "no-restricted-imports": [
       "error",
-      {
-        paths: [
-          { name: "react", importNames: ["default"] },
-          {
-            name: "@mantine/core",
-            importNames: ["Button", "ActionIcon"],
-            message: "Please use lib/mantine instead.",
-          },
-        ],
-      },
+      { paths: [{ name: "react", importNames: ["default"] }] },
     ],
 
     /* react */
