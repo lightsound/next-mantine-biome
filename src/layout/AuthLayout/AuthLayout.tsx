@@ -8,12 +8,12 @@ export const AuthLayout: CustomLayout = (page) => {
     <Center
       sx={(theme) => {
         return {
-          minHeight: "100vh",
           backgroundColor: theme.colors.gray[0],
+          minHeight: "100vh",
         };
       }}
     >
-      <Container size="xs" sx={{ width: 480, paddingBottom: 16 }}>
+      <Container size="xs" sx={{ paddingBottom: 16, width: 480 }}>
         <LayoutErrorBoundary>{page}</LayoutErrorBoundary>
       </Container>
     </Center>

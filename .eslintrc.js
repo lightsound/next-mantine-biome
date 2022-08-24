@@ -1,5 +1,10 @@
 module.exports = {
-  plugins: ["simple-import-sort", "unused-imports", "sort-destructure-keys"],
+  plugins: [
+    "sort-keys-custom-order",
+    "simple-import-sort",
+    "import",
+    "unused-imports",
+  ],
   extends: [
     "plugin:@typescript-eslint/recommended",
     "next/core-web-vitals",
@@ -34,26 +39,20 @@ module.exports = {
     "react/destructuring-assignment": ["error", "always"],
 
     /* import 系 */
+    // import 文はファイル先頭に書くことを強制
+    "import/first": "error",
     // インポート時に改行を強制
     "import/newline-after-import": "error",
     // デフォルトエクスポートを禁止
     "import/no-default-export": "error",
+    // パッケージが同じ場合は 1 つの import にまとめる
+    "import/no-duplicates": "error",
     // インポート順序を強制
     "simple-import-sort/imports": "error",
     // エクスポート順序を強制
     "simple-import-sort/exports": "error",
     // 使用していないインポートを禁止
     "unused-imports/no-unused-imports": "error",
-    // unused-imports を使うために必要？この設定項目の意義ちょっと分かっていない。
-    "unused-imports/no-unused-vars": [
-      "error",
-      {
-        vars: "all",
-        varsIgnorePattern: "^_",
-        args: "after-used",
-        argsIgnorePattern: "^_",
-      },
-    ],
 
     /* typescript-eslint */
     // 暗黙的な any を禁止
@@ -73,15 +72,16 @@ module.exports = {
       { varsIgnorePattern: "^_", argsIgnorePattern: "^_" },
     ],
 
-    /* other */
-    // 分割代入の順序を強制
-    "sort-destructure-keys/sort-destructure-keys": "error",
+    /* others */
+    // typeキーのソート（ id は一番先頭に配置）
+    "sort-keys-custom-order/type-keys": ["error", { orderedKeys: ["id"] }],
+    // オブジェクトキーのソート（ id は一番先頭に配置）
+    "sort-keys-custom-order/object-keys": ["error", { orderedKeys: ["id"] }],
   },
   overrides: [
     {
       files: ["src/pages/**/*.tsx", "src/pages/api/**/*.ts", "next.config.mjs"],
       rules: {
-        /* sort 系 */
         // pages コンポーネントのデフォルトエクスポートを許可
         "import/no-default-export": "off",
       },
