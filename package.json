@@ -6,9 +6,10 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "biome lint .",
-		"format": "biome format .",
-		"check": "biome check --apply ."
+		"check:lint": "biome lint .",
+		"check:format": "biome format .",
+		"check": "biome check .",
+		"fix": "biome check --apply ."
 	},
 	"dependencies": {
 		"@mantine/core": "^7.6.1",
