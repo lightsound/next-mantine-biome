@@ -2,8 +2,8 @@ import classes from "./Navbar.module.css";
 
 import { Group, ScrollArea } from "@mantine/core";
 import { IconBellRinging, IconDashboard } from "@tabler/icons-react";
-import { UserButton } from "~/app/(dashboard)/d/_local/DashboardLayout/UserButton";
-import { ActionThemeIcon, ActiveNavLink } from "~/shared-components";
+import { ActionThemeIcon, ActiveNavLink } from "~/components";
+import { UserButton } from "./UserButton";
 
 const data = [
 	{ link: "/d", label: "ダッシュボード", icon: IconDashboard },
