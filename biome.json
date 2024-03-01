@@ -1,0 +1,52 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.5.1/schema.json",
+	"files": {
+		"ignore": ["public", ".next", "node_modules"]
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"all": true,
+			"nursery": {
+				"all": true,
+				"noNodejsModules": "off"
+			}
+		}
+	},
+	"overrides": [
+		{
+			"include": [
+				"next.config.mjs",
+				"error.tsx",
+				"layout.tsx",
+				"loading.tsx",
+				"not-found.tsx",
+				"page.tsx",
+				"template.tsx",
+				".storybook",
+				"*.stories.*",
+				"*.stories-skip.*"
+			],
+			"linter": {
+				"rules": {
+					"style": {
+						"noDefaultExport": "off"
+					}
+				}
+			}
+		},
+		{
+			"include": ["*.stories-skip.*"],
+			"linter": {
+				"rules": {
+					"nursery": {
+						"useFilenamingConvention": "off"
+					}
+				}
+			}
+		}
+	]
+}

@@ -1,1 +1,0 @@
-export { getPath } from "./path";

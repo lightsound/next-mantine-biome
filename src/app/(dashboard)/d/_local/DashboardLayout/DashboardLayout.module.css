@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.main {
+  padding: rem(20px);
+}
