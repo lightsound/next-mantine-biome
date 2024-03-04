@@ -8,7 +8,7 @@ export function useMountedColorScheme() {
 	const { toggleColorScheme } = useMantineColorScheme({
 		keepTransitions: true,
 	});
-	const color = useComputedColorScheme(undefined, {
+	const color = useComputedColorScheme("light", {
 		getInitialValueInEffect: true,
 	});
 
