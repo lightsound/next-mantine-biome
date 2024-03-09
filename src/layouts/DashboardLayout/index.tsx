@@ -1,13 +1,13 @@
-import classes from "./index.module.css";
+import c from "./index.module.css";
 
 import type { ReactNode } from "react";
 import { Navbar } from "./Navbar";
 
 export function DashboardLayout({ children }: { children: ReactNode }) {
 	return (
-		<div className={classes.container}>
+		<div className={c.container}>
 			<Navbar />
-			<main className={classes.main}>{children}</main>
+			<main className={c.main}>{children}</main>
 		</div>
 	);
 }

@@ -1,4 +1,4 @@
-import classes from "./Header.module.css";
+import c from "./Header.module.css";
 
 import { Button, Container, Group } from "@mantine/core";
 import Link from "next/link";
@@ -12,8 +12,8 @@ const links = [
 
 export function Header() {
 	return (
-		<header className={classes.header}>
-			<Container size="md" className={classes.inner}>
+		<header className={c.header}>
+			<Container size="md" className={c.inner}>
 				<Group gap={40}>
 					ロゴ
 					<Group component="nav" gap={8}>

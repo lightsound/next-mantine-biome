@@ -1,4 +1,4 @@
-import classes from "./Navbar.module.css";
+import c from "./Navbar.module.css";
 
 import { Group, ScrollArea } from "@mantine/core";
 import {
@@ -18,16 +18,16 @@ const data = [
 
 export function Navbar() {
 	return (
-		<nav className={classes.navbar}>
-			<div className={classes.header}>
+		<nav className={c.navbar}>
+			<div className={c.header}>
 				<Group justify="space-between">
 					ロゴ
 					<ActionThemeIcon />
 				</Group>
 			</div>
 
-			<ScrollArea className={classes.links}>
-				<div className={classes.linksInner}>
+			<ScrollArea className={c.links}>
+				<div className={c.linksInner}>
 					{/* biome-ignore lint/nursery/useJsxKeyInIterable: TODO: Biome側のエラーと思われるため、いったん無効化 */}
 					{data.map((item) => (
 						<ActiveNavLink
@@ -40,8 +40,8 @@ export function Navbar() {
 				</div>
 			</ScrollArea>
 
-			<div className={classes.footer}>
-				<Link href="/d/settings" className={classes.userLink}>
+			<div className={c.footer}>
+				<Link href="/d/settings" className={c.userLink}>
 					<Group wrap="nowrap">
 						<User
 							name="しまぶーしまぶーしまぶーしまぶーしまぶー"

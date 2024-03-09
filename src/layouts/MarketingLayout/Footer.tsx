@@ -1,4 +1,4 @@
-import classes from "./Footer.module.css";
+import c from "./Footer.module.css";
 
 import { Anchor, Container, Group } from "@mantine/core";
 
@@ -11,10 +11,10 @@ const links = [
 
 export function Footer() {
 	return (
-		<footer className={classes.footer}>
-			<Container className={classes.inner}>
+		<footer className={c.footer}>
+			<Container className={c.inner}>
 				ロゴ
-				<Group className={classes.links}>
+				<Group className={c.links}>
 					{/* biome-ignore lint/nursery/useJsxKeyInIterable: TODO: Biome側のエラーと思われるため、いったん無効化 */}
 					{links.map((link) => (
 						<Anchor<"a"> c="dimmed" key={link.label} href={link.link} size="sm">
