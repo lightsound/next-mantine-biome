@@ -1,0 +1,10 @@
+.user {
+  flex: 1;
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-dark-0));
+}
+
+.stack {
+  flex: 1;
+  min-width: 0;
+  word-break: break-all;
+}

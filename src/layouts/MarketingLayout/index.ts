@@ -1,1 +1,0 @@
-export { MarketingLayout } from "./MarketingLayout";

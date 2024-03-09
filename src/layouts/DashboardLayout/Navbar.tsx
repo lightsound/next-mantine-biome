@@ -1,14 +1,20 @@
 import classes from "./Navbar.module.css";
 
 import { Group, ScrollArea } from "@mantine/core";
-import { IconBellRinging, IconDashboard } from "@tabler/icons-react";
-import { ActionThemeIcon, ActiveNavLink } from "~/components";
-import { UserButton } from "./UserButton";
+import {
+	IconBellRinging,
+	IconChevronRight,
+	IconDashboard,
+} from "@tabler/icons-react";
+import Link from "next/link";
+import { ActiveNavLink } from "~/components/ActiveLink/ActiveNavLink";
+import { ActionThemeIcon } from "~/components/Theme/ActionThemeIcon";
+import { User } from "~/components/User";
 
 const data = [
 	{ link: "/d", label: "ダッシュボード", icon: IconDashboard },
 	{ link: "/d/notification", label: "お知らせ", icon: IconBellRinging },
-];
+] as const;
 
 export function Navbar() {
 	return (
@@ -22,6 +28,7 @@ export function Navbar() {
 
 			<ScrollArea className={classes.links}>
 				<div className={classes.linksInner}>
+					{/* biome-ignore lint/nursery/useJsxKeyInIterable: TODO: Biome側のエラーと思われるため、いったん無効化 */}
 					{data.map((item) => (
 						<ActiveNavLink
 							key={item.label}
@@ -34,7 +41,16 @@ export function Navbar() {
 			</ScrollArea>
 
 			<div className={classes.footer}>
-				<UserButton />
+				<Link href="/d/settings" className={classes.userLink}>
+					<Group wrap="nowrap">
+						<User
+							name="しまぶーしまぶーしまぶーしまぶーしまぶー"
+							email="shimabu@example.com"
+							src="/user.webp"
+						/>
+						<IconChevronRight size={14} stroke={1.5} />
+					</Group>
+				</Link>
 			</div>
 		</nav>
 	);

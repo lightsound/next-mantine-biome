@@ -1,7 +1,7 @@
 "use client";
 
 import { useComputedColorScheme, useMantineColorScheme } from "@mantine/core";
-import { useCallback, useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 
 export function useMountedColorScheme() {
 	const isMounted = useIsMounted();
@@ -14,19 +14,19 @@ export function useMountedColorScheme() {
 
 	return {
 		toggleColorScheme,
-		colorScheme: isMounted() ? color : undefined,
+		colorScheme: isMounted ? color : undefined,
 	};
 }
 
-function useIsMounted(): () => boolean {
-	const isMounted = useRef(false);
+function useIsMounted() {
+	const [isMounted, setMounted] = useState(false);
 
 	useEffect(() => {
-		isMounted.current = true;
+		setMounted(true);
 		return () => {
-			isMounted.current = false;
+			setMounted(false);
 		};
 	}, []);
 
-	return useCallback(() => isMounted.current, []);
+	return isMounted;
 }

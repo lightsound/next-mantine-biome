@@ -1,4 +1,4 @@
-import classes from "./DashboardLayout.module.css";
+import classes from "./index.module.css";
 
 import type { ReactNode } from "react";
 import { Navbar } from "./Navbar";

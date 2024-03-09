@@ -7,7 +7,7 @@ const links = [
 	{ link: "#", label: "利用規約" },
 	{ link: "#", label: "プライバシーポリシー" },
 	{ link: "#", label: "お問い合わせ" },
-];
+] as const;
 
 export function Footer() {
 	return (
@@ -15,6 +15,7 @@ export function Footer() {
 			<Container className={classes.inner}>
 				ロゴ
 				<Group className={classes.links}>
+					{/* biome-ignore lint/nursery/useJsxKeyInIterable: TODO: Biome側のエラーと思われるため、いったん無効化 */}
 					{links.map((link) => (
 						<Anchor<"a"> c="dimmed" key={link.label} href={link.link} size="sm">
 							{link.label}

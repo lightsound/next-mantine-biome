@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
+	"$schema": "https://biomejs.dev/schemas/1.6.0/schema.json",
 	"files": {
 		"ignore": ["public", ".next", "node_modules"]
 	},
@@ -12,7 +12,8 @@
 			"all": true,
 			"nursery": {
 				"all": true,
-				"noNodejsModules": "off"
+				"noNodejsModules": "off",
+				"noUndeclaredDependencies": "off"
 			}
 		}
 	},
