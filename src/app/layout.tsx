@@ -4,9 +4,7 @@ import "@mantine/core/styles.css";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import type { ReactNode } from "react";
 
-export default function RootLayout({
-	children,
-}: Readonly<{ children: ReactNode }>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="ja">
 			<head>
