@@ -5,16 +5,12 @@ import { useEffect, useState } from "react";
 
 export function useMountedColorScheme() {
 	const isMounted = useIsMounted();
-	const { toggleColorScheme } = useMantineColorScheme({
-		keepTransitions: true,
-	});
-	const color = useComputedColorScheme("light", {
-		getInitialValueInEffect: true,
-	});
+	const { toggleColorScheme } = useMantineColorScheme();
+	const computedColorScheme = useComputedColorScheme("light");
 
 	return {
 		toggleColorScheme,
-		colorScheme: isMounted ? color : undefined,
+		colorScheme: isMounted ? computedColorScheme : undefined,
 	};
 }
 

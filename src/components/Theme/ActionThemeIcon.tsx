@@ -12,7 +12,7 @@ export function ActionThemeIcon(props: ActionIconProps) {
 			variant="default"
 			aria-label="Toggle theme"
 			onClick={toggleColorScheme}
-			loading={!colorScheme}
+			loading={colorScheme === undefined}
 			{...props}
 		>
 			{colorScheme === "light" ? (

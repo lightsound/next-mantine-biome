@@ -13,7 +13,7 @@ export function SwitchTheme(props: SwitchProps) {
 			size="md"
 			onChange={toggleColorScheme}
 			checked={colorScheme === "dark"}
-			disabled={!colorScheme}
+			disabled={colorScheme === undefined}
 			onLabel={<IconSun size={16} color={theme.colors.yellow[4]} />}
 			offLabel={<IconMoon size={16} color={theme.colors.blue[6]} />}
 			{...props}
