@@ -1,8 +1,8 @@
 {
-	"[html]": {
+	"[css]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"[css]": {
+	"[html]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[markdown]": {
@@ -12,7 +12,13 @@
 		"editor.defaultFormatter": "biomejs.biome"
 	},
 	"cSpell.words": ["biomejs", "mantine", "nextjs", "tabler", "webp"],
-	"css.validate": false,
+	"cssVariables.lookupFiles": [
+		"**/*.css",
+		"**/*.scss",
+		"**/*.sass",
+		"**/*.less",
+		"node_modules/@mantine/core/styles.css"
+	],
 	"editor.codeActionsOnSave": {
 		"quickfix.biome": "always",
 		"source.organizeImports.biome": "always"
